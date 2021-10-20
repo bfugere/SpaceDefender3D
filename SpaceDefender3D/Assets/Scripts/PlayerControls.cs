@@ -5,23 +5,49 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 30f;
+    [SerializeField] float xRange = 10f;
+    [SerializeField] float yRange = 8f;
 
-    void Start()
-    {
-        
-    }
+    [SerializeField] float positionPitchFactor = -2f;
+    [SerializeField] float controlPitchFactor = -15f;
+    [SerializeField] float positionYawFactor = 2f;
+    [SerializeField] float controlRollFactor = -20f;
+
+    float xTilt;
+    float yTilt;
 
     void Update()
     {
-        float xTilt = Input.GetAxis("Horizontal");
-        float yTilt = Input.GetAxis("Vertical");
+        ProcessPosition();
+        ProcessRotation();
+    }
+
+    void ProcessPosition()
+    {
+        xTilt = Input.GetAxis("Horizontal");
+        yTilt = Input.GetAxis("Vertical");
 
         float xOffset = xTilt * moveSpeed * Time.deltaTime;
         float yOffset = yTilt * moveSpeed * Time.deltaTime;
 
-        float newXPos = transform.localPosition.x + xOffset;
-        float newYPos = transform.localPosition.y + yOffset;
+        float rawXPos = transform.localPosition.x + xOffset;
+        float rawYPos = transform.localPosition.y + yOffset;
 
-        transform.localPosition = new Vector3(newXPos, newYPos, transform.localPosition.z);
+        float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
+        float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
+
+        transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
+    }
+
+    void ProcessRotation()
+    {
+        float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
+        float pitchDueToControlThrow = yTilt * controlPitchFactor;
+
+        float pitch = pitchDueToPosition + pitchDueToControlThrow;
+        float yaw = transform.localPosition.x * positionYawFactor;
+        float roll = xTilt * controlRollFactor;
+
+        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 }
