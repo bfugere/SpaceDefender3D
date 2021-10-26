@@ -4,26 +4,22 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 30f;
+    [Header("Screen Clamp Constraints")]
     [SerializeField] float xRange = 10f;
     [SerializeField] float yRange = 8f;
 
-    [SerializeField] float positionPitchFactor = -2f;
+    [Header("Ship Tuning")]
+    [SerializeField] float moveSpeed = 30f;
     [SerializeField] float controlPitchFactor = -15f;
     [SerializeField] float positionYawFactor = 2f;
-    [SerializeField] float controlRollFactor = -20f;
+    [SerializeField] float positionPitchFactor = -2f;
+    [SerializeField] float controlRollFactor = -30f;
 
+    [Header("Weapons")]
     [SerializeField] GameObject[] lasers;
-
-    ParticleSystem myParticleSystem;
 
     float xTilt;
     float yTilt;
-
-    void Start()
-    {
-        myParticleSystem = GetComponent<ParticleSystem>();
-    }
 
     void Update()
     {
