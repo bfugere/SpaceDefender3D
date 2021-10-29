@@ -284,6 +284,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laser Right
       objectReference: {fileID: 0}
+    - target: {fileID: 8413122103744180146, guid: 9ba308753762d6144b47a4a9902c011b, type: 3}
+      propertyPath: m_Size.x
+      value: 9.935265
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413122103744180146, guid: 9ba308753762d6144b47a4a9902c011b, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413122103744180146, guid: 9ba308753762d6144b47a4a9902c011b, type: 3}
+      propertyPath: m_Size.z
+      value: 5.4547615
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413122103744180146, guid: 9ba308753762d6144b47a4a9902c011b, type: 3}
+      propertyPath: m_Center.x
+      value: 0.033390045
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413122103744180146, guid: 9ba308753762d6144b47a4a9902c011b, type: 3}
+      propertyPath: m_Center.y
+      value: -0.00000071525574
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413122103744180146, guid: 9ba308753762d6144b47a4a9902c011b, type: 3}
+      propertyPath: m_Center.z
+      value: -2.2726192
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 781699261124423036, guid: 9ba308753762d6144b47a4a9902c011b, type: 3}
     - {fileID: 6428950316712113507, guid: 9ba308753762d6144b47a4a9902c011b, type: 3}
