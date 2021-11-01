@@ -65,7 +65,7 @@ public class PlayerControls : MonoBehaviour
             ActivateLasers(false);
     }
 
-    void ActivateLasers(bool isActive)
+    public void ActivateLasers(bool isActive)
     {
         foreach (var laser in lasers)
         {

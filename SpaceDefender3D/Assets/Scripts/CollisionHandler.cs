@@ -28,6 +28,7 @@ public class CollisionHandler : MonoBehaviour
     IEnumerator StartCrashSequence(float waitTime)
     {
         playerControlsScript.enabled = false;
+        playerControlsScript.ActivateLasers(false);
         myMeshRenderer.enabled = false;
         myBoxCollider.enabled = false;
         explosionVFX.Play();
