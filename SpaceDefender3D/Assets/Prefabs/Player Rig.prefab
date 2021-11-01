@@ -197,6 +197,68 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7878637101984315723, guid: 3593bc342a6968342a9689fe10f35ec6, type: 3}
   m_PrefabInstance: {fileID: 2196846788326858794}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4930774294623032325
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3605823522440003920}
+    m_Modifications:
+    - target: {fileID: 551338847878750029, guid: c4513c1f87590e9439471644cfd391e5, type: 3}
+      propertyPath: m_Name
+      value: Explosion VFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346345064978573050, guid: c4513c1f87590e9439471644cfd391e5, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346345064978573050, guid: c4513c1f87590e9439471644cfd391e5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346345064978573050, guid: c4513c1f87590e9439471644cfd391e5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346345064978573050, guid: c4513c1f87590e9439471644cfd391e5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346345064978573050, guid: c4513c1f87590e9439471644cfd391e5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346345064978573050, guid: c4513c1f87590e9439471644cfd391e5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346345064978573050, guid: c4513c1f87590e9439471644cfd391e5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346345064978573050, guid: c4513c1f87590e9439471644cfd391e5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346345064978573050, guid: c4513c1f87590e9439471644cfd391e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346345064978573050, guid: c4513c1f87590e9439471644cfd391e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346345064978573050, guid: c4513c1f87590e9439471644cfd391e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c4513c1f87590e9439471644cfd391e5, type: 3}
+--- !u!198 &8728734101606408549 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4417767848059123040, guid: c4513c1f87590e9439471644cfd391e5, type: 3}
+  m_PrefabInstance: {fileID: 4930774294623032325}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8985121404088219608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -232,6 +294,10 @@ PrefabInstance:
       propertyPath: lasers.Array.data[1]
       value: 
       objectReference: {fileID: 1859588735321687566}
+    - target: {fileID: 5386847822030694001, guid: 9ba308753762d6144b47a4a9902c011b, type: 3}
+      propertyPath: explosionVFX
+      value: 
+      objectReference: {fileID: 8728734101606408549}
     - target: {fileID: 5670445497007238320, guid: 9ba308753762d6144b47a4a9902c011b, type: 3}
       propertyPath: m_Name
       value: Player Ship

@@ -7,12 +7,17 @@ using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour
 {
     [SerializeField] float waitTime = 1f;
+    [SerializeField] ParticleSystem explosionVFX;
 
     PlayerControls playerControlsScript;
+    MeshRenderer myMeshRenderer;
+    BoxCollider myBoxCollider;
 
     void Start()
     {
         playerControlsScript = GetComponent<PlayerControls>();
+        myMeshRenderer = GetComponent<MeshRenderer>();
+        myBoxCollider = GetComponent<BoxCollider>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -23,6 +28,9 @@ public class CollisionHandler : MonoBehaviour
     IEnumerator StartCrashSequence(float waitTime)
     {
         playerControlsScript.enabled = false;
+        myMeshRenderer.enabled = false;
+        myBoxCollider.enabled = false;
+        explosionVFX.Play();
 
         yield return new WaitForSeconds(waitTime);
 
