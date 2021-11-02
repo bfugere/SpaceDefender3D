@@ -17,6 +17,8 @@ public class PlayerControls : MonoBehaviour
 
     [Header("Weapons")]
     [SerializeField] GameObject[] lasers;
+    [SerializeField] AudioClip projectileSFX;
+    [SerializeField] [Range(0, 1)] float projectileVolume = 0.025f;
 
     float xTilt;
     float yTilt;
@@ -60,7 +62,10 @@ public class PlayerControls : MonoBehaviour
     void ProcessFiring()
     {
         if (Input.GetButton("Fire1"))
+        {
             ActivateLasers(true);
+            AudioSource.PlayClipAtPoint(projectileSFX, Camera.main.transform.position, projectileVolume);
+        }
         else
             ActivateLasers(false);
     }
