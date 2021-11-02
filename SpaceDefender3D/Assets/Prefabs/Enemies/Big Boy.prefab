@@ -76,7 +76,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: -5.46, y: 0.34, z: 2.4}
+  m_Size: {x: 0, y: 0.34, z: 2.4}
   m_Center: {x: 0, y: -0.3, z: -0.86}
 --- !u!1 &3145861909647889664
 GameObject:
@@ -265,7 +265,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 551338847878750029, guid: 5de10123c5faca749836c115993a40c5, type: 3}
   hitVFX: {fileID: 551338847878750029, guid: fa772b02a622a9246afb9d17f5ecb60a, type: 3}
-  parent: {fileID: 0}
   scorePerHit: 20
   hitPoints: 100
 --- !u!1 &9097032484476668454
